@@ -1,8 +1,3 @@
-/* Template: Aria - Business HTML Landing Page Template
-   Author: Inovatik
-   Created: Jul 2019
-   Description: Custom JS file
-*/
 
 
 (function($) {
@@ -190,3 +185,41 @@
 	});
 
 })(jQuery);
+
+function Enviar(){
+    let nome = document.getElementById("nomeid");
+    let telefone = document.getElementById("telefoneid");
+    let mensagem = document.getElementById("mensagemid");
+
+    if(nome.value != "" & telefone.value != "" & mensagem.value != ""){
+		console.log('aqui01')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20${mensagem.value}`);
+    } else if (nome.value != "" & telefone.value != ""){
+		console.log('aqui02')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
+
+    }else if(nome.value != ""){
+		console.log('aqui03')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
+    }
+    
+}
+
+function Enviar2(){
+    let nome = document.getElementById("nomeid2");
+    let telefone = document.getElementById("telefoneid2");
+    let mensagem = document.getElementById("mensagemid2");
+
+    if(nome.value != "" & telefone.value != "" & mensagem.value != ""){
+		console.log('aqui01')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20${mensagem.value}`);
+    } else if (nome.value != "" & telefone.value != ""){
+		console.log('aqui02')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
+
+    }else if(nome.value != ""){
+		console.log('aqui03')
+        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
+    }
+    
+}

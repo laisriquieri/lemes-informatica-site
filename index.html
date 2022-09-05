@@ -51,7 +51,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,13 +76,9 @@
                 </li>
 
                 <!-- Dropdown Menu -->          
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">SOBRE</a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMOS E CONDIÇÕES</span></a>
-                        <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">POLITICA DE PRIVACIDADE</span></a>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#about">SOBRE</a>
+                    
                 </li>
                 <!-- end of dropdown menu -->
 
@@ -141,7 +137,7 @@
                     <div class="card">
                         <span class="fa-stack">
                             <span class="hexagon"></span>
-                            <i class="fas fa-binoculars fa-stack-1x"></i>
+                            <i class="fas fa-wrench fa-stack-1x"></i>
                         </span>
                         <div class="card-body">
                             <h4 class="card-title">Informática</h4>
@@ -154,7 +150,7 @@
                     <div class="card">
                         <span class="fa-stack">
                             <span class="hexagon"></span>
-                            <i class="fas fa-list-alt fa-stack-1x"></i>
+                            <i class="fas fa-microchip fa-stack-1x"></i>
                         </span>
                         <div class="card-body">
                             <h4 class="card-title">Hardware</h4>
@@ -167,7 +163,7 @@
                     <div class="card">
                         <span class="fa-stack">
                             <span class="hexagon"></span>
-                            <i class="fas fa-chart-pie fa-stack-1x"></i>
+                            <i class="fas fa-keyboard fa-stack-1x"></i>
                         </span>
                         <div class="card-body">
                             <h4 class="card-title">Periféricos</h4>
@@ -228,7 +224,7 @@
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <img class="img-fluid" src="images/services-2.jpeg" alt="alternative">
+                            <img class="img-fluid" src="images/visita-tecnica.jpeg" alt="alternative">
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Visita Técnica</h3>
@@ -266,7 +262,7 @@
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
                                     <i class="fas fa-square"></i>
-                                    <div class="media-body">Teclas danificadas,</div>
+                                    <div class="media-body">Manutenção preventiva,</div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-square"></i>
@@ -325,28 +321,26 @@
                     <!-- Call Me Form -->
                     <form id="callMeForm">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="lname" name="lname" required="">
-                            <label class="label-control" for="lname">Nome</label>
+                            <input type="text" class="form-control-input" id="nomeid" name="nome" required="">
+                            <label class="label-control" for="nome">Nome</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="lphone" name="lphone" required="">
-                            <label class="label-control" for="lphone">Telefone</label>
+                            <input type="text" class="form-control-input" id="telefoneid" name="telefone" required="">
+                            <label class="label-control" for="telefone">Telefone</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required=""></textarea>
-                            <label class="label-control" for="cmessage">Sua mensagem</label>
+                            <textarea class="form-control-textarea" id="mensagemid" name="mensagem" required=""></textarea>
+                            <label class="label-control" for="mensagem">Sua mensagem</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         
                         <div class="form-group">
                             <input type="submit" class="form-control-submit-button" onclick="Enviar();" value="ENVIAR WHATSAPP">
                         </div>
-                        <div class="form-message">
-                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
+                        
                     </form>
                     <!-- end of call me form -->
                     
@@ -372,36 +366,85 @@
                 <div class="col-lg-12">
                     <!-- Filter -->
                     <div class="button-group filters-button-group">
-                        <a class="button is-checked" data-filter="*"><span>PERIFÉRICOS</span></a>
-                        <a class="button" data-filter=".design"><span>CELULAR</span></a>
-                        <a class="button" data-filter=".development"><span>COMPUTADOR</span></a>
-                        <a class="button" data-filter=".marketing"><span>MARKETING</span></a>
-                        <a class="button" data-filter=".seo"><span>SEO</span></a>
+                        
+                        <a class="button" data-filter=".celular"><span>CELULAR</span></a>
+                        <a class="button" data-filter=".computador"><span>COMPUTADOR</span></a>
+                        <a class="button" data-filter=".perifericos"><span>PERIFÉRICOS</span></a>
+                        <a class="button is-checked" data-filter="*"><span>TODOS</span></a>
                     </div> <!-- end of button group -->
                     <div class="grid">
-                        <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Online Banking</span></div><img src="images/project-1.jpg" alt="alternative"></a>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#celular-1"><div class="element-item-overlay"><span>PowerBank 5000</span></div><img src="images/celular-1.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item development">
-                            <a class="popup-with-move-anim" href="#project-2"><div class="element-item-overlay"><span>Classic Industry</span></div><img src="images/project-2.jpg" alt="alternative"></a>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Teclado Gamer</span></div><img src="images/computador-2.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-3"><div class="element-item-overlay"><span>BoomBap Audio</span></div><img src="images/project-3.jpg" alt="alternative"></a>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Camera</span></div><img src="images/computador-8.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing">
-                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Van Moose</span></div><img src="images/project-4.jpg" alt="alternative"></a>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Peliculas</span></div><img src="images/celular-3.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design development marketing seo">
-                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Joy Moments</span></div><img src="images/project-5.jpg" alt="alternative"></a>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Caixa de Som Charge 3</span></div><img src="images/celular-6.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design marketing seo">
-                            <a class="popup-with-move-anim" href="#project-6"><div class="element-item-overlay"><span>Spark Events</span></div><img src="images/project-6.jpg" alt="alternative"></a>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Carregador Veicular</span></div><img src="images/celular-4.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-7"><div class="element-item-overlay"><span>Casual Wear</span></div><img src="images/project-7.jpg" alt="alternative"></a>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Mouse Sem Fio</span></div><img src="images/computador-3.jpeg" alt="alternative"></a>
                         </div>
-                        <div class="element-item design marketing">
-                            <a class="popup-with-move-anim" href="#project-8"><div class="element-item-overlay"><span>Zazoo Apps</span></div><img src="images/project-8.jpg" alt="alternative"></a>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Fone A-B05</span></div><img src="images/computador-6.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>PowerBank 10000</span></div><img src="images/celular-2.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Capinha</span></div><img src="images/celular-5.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Caixa de Som AL-3081</span></div><img src="images/celular-7.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item celular">
+                            <a class="popup-with-move-anim" href="#project-1"><div class="element-item-overlay"><span>Carregador Tipo C</span></div><img src="images/celular-8.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Teclado Simples</span></div><img src="images/computador-1.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Mouse Gamer</span></div><img src="images/computador-4.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Fone P4-156</span></div><img src="images/computador-5.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item computador ">
+                            <a class="popup-with-move-anim" href="#project-4"><div class="element-item-overlay"><span>Cooler Notebook</span></div><img src="images/computador-7.jpeg" alt="alternative"></a>
+                        </div>
+                        
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Wireless-N Wifi Repeater</span></div><img src="images/perifericos-1.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Receiver Music</span></div><img src="images/perifericos-2.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo VGA</span></div><img src="images/perifericos-3.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo USB</span></div><img src="images/perifericos-4.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo P2</span></div><img src="images/perifericos-5.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo Impressora</span></div><img src="images/perifericos-6.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo HDMI</span></div><img src="images/perifericos-7.jpeg" alt="alternative"></a>
+                        </div>
+                        <div class="element-item perifericos">
+                            <a class="popup-with-move-anim" href="#project-5"><div class="element-item-overlay"><span>Cabo de Energia</span></div><img src="images/perifericos-8.jpeg" alt="alternative"></a>
                         </div>
                     </div> <!-- end of grid -->
                     <!-- end of filter -->
@@ -415,23 +458,18 @@
 
     <!-- Project Lightboxes -->
     <!-- Lightbox -->
-    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div id="celular-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
-                <img class="img-fluid" src="images/project-1.jpg" alt="alternative">
+                <img class="img-fluid" src="images/celular-1.jpeg" alt="alternative">
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Online Banking</h3>
+                <h3>PowerBank 5000</h3>
                 <hr class="line-heading">
-                <h6>Strategy Development</h6>
-                <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current needs</p>
-                <p>By offering the best professional services and quality products in the market. Don't hesitate and get in touch with us.</p>
-                <div class="testimonial-container">
-                    <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current requirements.</p>
-                    <p class="testimonial-author">General Manager</p>
-                </div>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a> 
+
+                <p>Carregue seu celular de onde estiver, muita praticidade para seu dia a dia.</p>
+                <a class="btn-solid-reg" href="https://wa.me/+5516991778100?text=%20" target="_blank">WHATSAPP</a> 
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -609,45 +647,19 @@
             <div class="row">
                 <div class="col-lg-5 col-xl-6">
                     <div class="image-container">
-                        <img class="img-fluid" src="images/about.jpg" alt="alternative">
+                        <img class="img-fluid" src="images/sobre.jpeg" alt="alternative">
                     </div> <!-- end of image-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-7 col-xl-6">
                     <div class="text-container">
-                        <div class="section-title">ABOUT</div>
-                        <h2>We're Passionate About Delivering Growth Services</h2>
-                        <p>Our goal is to provide the right business growth services at the appropriate time so companies can benefit from the created momentum and thrive for a long period of time</p>
-                        <ul class="list-unstyled li-space-lg">
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Everything we recommend has direct positive impact</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">You will become an important partner of our company</div>
-                            </li>
-                        </ul>
-
-                        <!-- Counter -->
-                        <div id="counter">
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="231">1</div>
-                                <div class="counter-info">Happy<br>Users</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="121">1</div>
-                                <div class="counter-info">Issues<br>Solved</div>
-                            </div>
-                            <div class="cell">
-                                <div class="counter-value number-count" data-count="159">1</div>
-                                <div class="counter-info">Good<br>Reviews</div>
-                            </div>
-                        </div>
-                        <!-- end of counter -->
-
-                    </div> <!-- end of text-container -->      
+                        <div class="section-title">SOBRE</div>
+                        <h2>História de Lemes Informática ao longo dos anos.</h2>
+                        <p>Tudo começou oficialmente na data de 27/03/2010 quando foi inaugurada a LEMES COMPANY INFORMÁTICA que a partir da data de 27/03/2022 passou a usar o nome de LEMES INFORMÁTICA, inicialmente ela começou localizada na Rua Guerino Alfredo Minervino na Vila Rezende, era um mix de produtos de informática, produtos esportivos e serviços de informática, com o passar do tempo devido ao trabalho bem desenvolvido na parte de assistência e para ter um foco no seguimento a LEMES INFORMÁTICA passou a comercializar somente produtos de informática e a focar na parte de </p>
+                    </div> <!-- end of text-container -->    
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
+            <br>
+            <p>manutenções de computadores, notebook, monitores, nobreaks, impressoras, visitas técnicas, sendo assim no dia 01/01/2014 ela mudou de endereço passando a se localizar na rua Bruno Cilurzo 407 Vila Rezende aonde tinha sua recepção na frente da casa e o barracão no fundo para ser realizado as manutenções, esse período foi muito importante para sua estruturação financeira, tendo foco no seu seguimento tudo começou a se deslanchar melhor e sua cartela de clientes foi aumentando rápido, na data de 11/10/2019 ela mudou-se para Rua Major Moura Mattos 610 Vila Rezende para ter maior visibilidade e facilidade para os clientes chegar ao local, essa etapa da LEMES INFORMÁTICA foi no inicio foi de adaptações com o local e de muitas melhorias, sempre com a tentativa de um atendimento perfeito, atenção com os clientes e honestidade com os orçamentos. a empresa segue firme com seus objetivos, mesmo com a pandemia está forte no mercado e cada vez melhorando seu mix de produtos e cada vez mais atendendo os seus clientes com rapidez, eficiência e eficaz na hora de entregar os equipamentos.</p>       
         </div> <!-- end of container -->
     </div> <!-- end of counter -->
     <!-- end of about -->
@@ -689,30 +701,27 @@
                 <div class="col-lg-6">
                     
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form id="formulario">
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required="">
-                            <label class="label-control" for="cname">Nome</label>
+                            <input type="text" class="form-control-input" id="nomeid2" name="nome" required="required">
+                            <label class="label-control" for="nome">Nome</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="lphone" name="lphone" required="">
-                            <label class="label-control" for="lphone">Telefone</label>
+                            <input type="text" class="form-control-input" id="telefoneid2" name="telefone" required="required">
+                            <label class="label-control" for="telefone">Telefone</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required=""></textarea>
-                            <label class="label-control" for="cmessage">Sua mensagem</label>
+                            <textarea class="form-control-textarea" id="mensagemid2" name="mensagem" required="required"></textarea>
+                            <label class="label-control" for="mensagem">Sua mensagem</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         
                         <div class="form-group">
-                            <input type="submit" class="form-control-submit-button" onclick="Enviar();" value="ENVIAR WHATSAPP">
+                            <input type="submit" class="form-control-submit-button" onclick="Enviar2();" value="ENVIAR WHATSAPP">
                         </div>
                         
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-                        </div>
                     </form>
                     <!-- end of contact form -->
 
@@ -729,8 +738,8 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="text-container about">
-                        <h4>Few Words About Aria</h4>
-                        <p class="white">We're passionate about delivering the best business growth services for companies just starting out as startups or industry players that have established their market position a long tima ago.</p>
+                        <h4>Lemes Informática</h4>
+                        <p class="white">Uma empresa especializada em serviços de informática prontos para te atender.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 
@@ -765,5 +774,7 @@
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+
+    
 </body>
 </html>
