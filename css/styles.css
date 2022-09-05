@@ -518,9 +518,9 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 6rem;
-	height: 7rem;
-	-webkit-backface-visibility: hidden;
+    width: 3rem;
+	height: 4rem;
+	
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -1775,8 +1775,7 @@ a:hover.back-to-top {
 		text-align: left;
 	}
 
-	.counter #counter .cell {
-	}
+	
 	/* end of about */
 
 
