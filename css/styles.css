@@ -1772,7 +1772,7 @@ a:hover.back-to-top {
 
 	/* About */
 	.counter #counter {
-		text-align: left;
+		text-align: justify;
 	}
 
 	
@@ -2172,6 +2172,7 @@ a:hover.back-to-top {
 		margin-top: 0.375rem;
 		margin-right: 0.5rem;
 		margin-left: 1rem;
+		text-align: justify;
 	}
 	/* end of about */
 	
