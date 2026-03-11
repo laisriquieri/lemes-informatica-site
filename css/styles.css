@@ -1,35 +1,3 @@
-/* Template: Aria - Business HTML Landing Page Template
-   Author: Inovatik
-   Created: Jul 2019
-   Description: Master CSS file
-*/
-
-/*****************************************
-Table Of Contents:
-
-01. General Styles
-02. Preloader
-03. Navigation
-04. Header
-05. Intro
-06. Description
-07. Services
-08. Details 1
-09. Details 2
-10. Testimonials
-11. Call Me
-12. Projects
-13. Project Lightboxes
-14. Team
-15. About
-16. Contact
-17. Footer
-18. Copyright
-19. Back To Top Button
-20. Extra Pages
-21. Media Queries
-******************************************/
-
 /*****************************************
 Colors:
 
@@ -42,18 +10,18 @@ Colors:
 - Body text - light gray #dfe5ec
 ******************************************/
 
-
 /******************************/
 /*     01. General Styles     */
 /******************************/
 body,
 html {
-    width: 100%;
+	width: 100%;
 	height: 100%;
 }
 
-body, p {
-	color: #787976; 
+body,
+p {
+	color: #787976;
 	font: 400 1rem/1.5625rem "Open Sans", sans-serif;
 }
 
@@ -259,7 +227,8 @@ strong {
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active),
+	screen and (-ms-high-contrast: none) {
 	.label-control {
 		top: 0.9375rem;
 	}
@@ -289,6 +258,7 @@ strong {
 	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
 	transition: all 0.2s;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
+	appearance: none;
 }
 
 .form-control-select {
@@ -298,7 +268,8 @@ strong {
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active),
+	screen and (-ms-high-contrast: none) {
 	.form-control-input {
 		padding-top: 1.25rem;
 		padding-bottom: 0.75rem;
@@ -314,20 +285,20 @@ strong {
 }
 
 select {
-    /* you should keep these first rules in place to maintain cross-browser behavior */
-    -webkit-appearance: none;
+	/* you should keep these first rules in place to maintain cross-browser behavior */
+	-webkit-appearance: none;
 	-moz-appearance: none;
 	-ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    background-image: url('../images/down-arrow.png');
-    background-position: 96% 50%;
-    background-repeat: no-repeat;
-    outline: none;
+	-o-appearance: none;
+	appearance: none;
+	background-image: url("../images/down-arrow.png");
+	background-position: 96% 50%;
+	background-repeat: no-repeat;
+	outline: none;
 }
 
 select::-ms-expand {
-    display: none; /* removes the ugly default down arrow on select form field in IE11 */
+	display: none; /* removes the ugly default down arrow on select form field in IE11 */
 }
 
 .form-control-textarea {
@@ -361,14 +332,15 @@ select::-ms-expand {
 	font: 400 0.875rem/1.375rem "Open Sans", sans-serif;
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
 	vertical-align: -15%;
 	margin-right: 0.375rem;
 }
 
 /* IE10+ hack to raise checkbox field position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
-	input[type='checkbox'] {
+@media screen and (-ms-high-contrast: active),
+	screen and (-ms-high-contrast: none) {
+	input[type="checkbox"] {
 		vertical-align: -9%;
 	}
 }
@@ -439,7 +411,6 @@ input[type='checkbox'] {
 }
 /* end of fade animation for image slider - magnific popup */
 
-
 /*************************/
 /*     02. Preloader     */
 /*************************/
@@ -459,7 +430,7 @@ input[type='checkbox'] {
 	left: 50%; /* centers the loading animation horizontally one the screen */
 	width: 3.75rem;
 	height: 1.25rem;
-	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */
 	text-align: center;
 }
 
@@ -484,22 +455,30 @@ input[type='checkbox'] {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-	0%, 80%, 100% { -webkit-transform: scale(0); }
-	40% { -webkit-transform: scale(1.0); }
-}
-
-@keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
+	0%,
+	80%,
+	100% {
 		-webkit-transform: scale(0);
-		-ms-transform: scale(0);
-		transform: scale(0);
-	} 40% { 
-		-webkit-transform: scale(1.0);
-		-ms-transform: scale(1.0);
-		transform: scale(1.0);
+	}
+	40% {
+		-webkit-transform: scale(1);
 	}
 }
 
+@keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}
 
 /**************************/
 /*     03. Navigation     */
@@ -518,9 +497,8 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 6rem;
+	width: 6rem;
 	height: 6rem;
-	
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -556,16 +534,17 @@ input[type='checkbox'] {
 }
 
 @keyframes fadeDropdown {
-    0% {
-        opacity: 0;
-    }
+	0% {
+		opacity: 0;
+	}
 
-    100% {
-        opacity: 1;
-    }
+	100% {
+		opacity: 1;
+	}
 }
 
-.navbar-custom .dropdown-toggle:focus { /* removes dropdown outline on focus  */
+.navbar-custom .dropdown-toggle:focus {
+	/* removes dropdown outline on focus  */
 	outline: 0;
 }
 
@@ -613,29 +592,37 @@ input[type='checkbox'] {
 	font-size: 2rem;
 }
 
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-times{
+.navbar-custom
+	button[aria-expanded="false"]
+	.navbar-toggler-awesome.fas.fa-times {
 	display: none;
 }
 
-.navbar-custom button[aria-expanded='false'] .navbar-toggler-awesome.fas.fa-bars{
+.navbar-custom
+	button[aria-expanded="false"]
+	.navbar-toggler-awesome.fas.fa-bars {
 	display: inline-block;
 }
 
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-bars{
+.navbar-custom
+	button[aria-expanded="true"]
+	.navbar-toggler-awesome.fas.fa-bars {
 	display: none;
 }
 
-.navbar-custom button[aria-expanded='true'] .navbar-toggler-awesome.fas.fa-times{
+.navbar-custom
+	button[aria-expanded="true"]
+	.navbar-toggler-awesome.fas.fa-times {
 	display: inline-block;
 	margin-right: 0.125rem;
 }
-
 
 /*********************/
 /*    04. Header     */
 /*********************/
 .header {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('../images/header-background.jpeg') center center no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+		url("../images/header-background.jpeg") center center no-repeat;
 	background-size: cover;
 }
 
@@ -663,7 +650,6 @@ input[type='checkbox'] {
 	margin-right: 0.5rem;
 	margin-bottom: 1.25rem;
 }
-
 
 /*********************/
 /*     05. Intro     */
@@ -705,9 +691,8 @@ input[type='checkbox'] {
 	-moz-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
-} 
+}
 /* end of hover animation */
-
 
 /***************************/
 /*     06. Description     */
@@ -737,7 +722,7 @@ input[type='checkbox'] {
 	position: absolute;
 	width: 6rem;
 	height: 6rem;
-	background: url('../images/hexagono.png') center center no-repeat;
+	background: url("../images/hexagono.png") center center no-repeat;
 	background-size: 6rem 6rem;
 }
 
@@ -754,13 +739,12 @@ input[type='checkbox'] {
 	margin-bottom: 0.625rem;
 }
 
-
 /************************/
 /*     07. Services     */
 /************************/
 .cards-2 {
-	padding-top: 3.625rem;	
-	padding-bottom: 1.25rem;	
+	padding-top: 3.625rem;
+	padding-bottom: 1.25rem;
 	background-color: #fbfbfb;
 }
 
@@ -832,13 +816,13 @@ input[type='checkbox'] {
 	background-color: #fff;
 }
 
-
 /*************************/
 /*     08. Details 1     */
 /*************************/
 .accordion .area-1 {
 	height: 27rem;
-	background: url('../images/details-1-background.jpg') center center no-repeat;
+	background: url("../images/details-1-background.jpg") center center
+		no-repeat;
 	background-size: cover;
 }
 
@@ -913,7 +897,6 @@ input[type='checkbox'] {
 .accordion .accordion-body {
 	margin-left: 3.125rem;
 }
-
 
 /*************************/
 /*     09. Details 2     */
@@ -1028,87 +1011,17 @@ input[type='checkbox'] {
 
 .tabs .area-2 {
 	height: 27rem;
-	background: url('../images/details-2-background.jpg') center center no-repeat;
+	background: url("../images/details-2-background.jpg") center center
+		no-repeat;
 	background-size: cover;
 }
-
-
-/****************************/
-/*     10. Testimonials     */
-/****************************/
-.slider {
-	padding-top: 6.375rem;
-	padding-bottom: 6.5rem;
-	background-color: #fbfbfb;
-}
-
-.slider h2 {
-	margin-bottom: 0.75rem;
-	text-align: center;
-}
-
-.slider .slider-container {
-	position: relative;
-}
-
-.slider .swiper-container {
-	position: static;
-	width: 90%;
-	text-align: center;
-}
-
-.slider .swiper-button-prev:focus,
-.slider .swiper-button-next:focus {
-	/* even if you can't see it chrome you can see it on mobile device */
-	outline: none;
-}
-
-.slider .swiper-button-prev {
-	left: -0.5rem;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23787976'%2F%3E%3C%2Fsvg%3E");
-	background-size: 1.125rem 1.75rem;
-}
-
-.slider .swiper-button-next {
-	right: -0.5rem;
-	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23787976'%2F%3E%3C%2Fsvg%3E");
-	background-size: 1.125rem 1.75rem;
-}
-
-.slider .card {
-	position: relative;
-	border: none;
-	background-color: transparent;
-}
-
-.slider .card-image {
-	width: 6rem;
-	height: 6rem;
-	margin-right: auto;
-	margin-bottom: 0.25rem;
-	margin-left: auto;
-	border-radius: 50%;
-}
-
-.slider .card .card-body {
-	padding-bottom: 0;
-}
-
-.slider .testimonial-text {
-	margin-bottom: 0.625rem;
-}
-
-.slider .testimonial-author {
-	color: #484a46;
-}
-
 
 /**********************/
 /*     11. Call Me    */
 /**********************/
 .form-1 {
-	padding-top: 6.625rem;	
-	padding-bottom: 5.625rem;	
+	padding-top: 6.625rem;
+	padding-bottom: 5.625rem;
 	background-color: #343a40;
 }
 
@@ -1169,7 +1082,6 @@ input[type='checkbox'] {
 .form-1 .help-block.with-errors .list-unstyled {
 	color: #dfe5ec;
 }
-
 
 /************************/
 /*     12. Projects     */
@@ -1244,10 +1156,10 @@ input[type='checkbox'] {
 	-moz-transform: scale(1.15);
 	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
-} 
+}
 /* end of hover animation */
 
-.filter .element-item .element-item-overlay { 
+.filter .element-item .element-item-overlay {
 	position: absolute;
 	z-index: 2;
 	top: 0;
@@ -1260,7 +1172,7 @@ input[type='checkbox'] {
 	transition: all 0.3s;
 }
 
-.filter .element-item .element-item-overlay span { 
+.filter .element-item .element-item-overlay span {
 	position: absolute;
 	z-index: 3;
 	top: 42%;
@@ -1269,7 +1181,6 @@ input[type='checkbox'] {
 	color: #fff;
 	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
 }
-
 
 /**********************************/
 /*     13. Project Lightboxes     */
@@ -1348,10 +1259,6 @@ input[type='checkbox'] {
 	height: 2.75rem;
 }
 
-
-
-
-
 /*********************/
 /*     15. About     */
 /*********************/
@@ -1416,7 +1323,6 @@ input[type='checkbox'] {
 	vertical-align: initial;
 }
 
-
 /***********************/
 /*     16. Contact     */
 /***********************/
@@ -1432,7 +1338,7 @@ input[type='checkbox'] {
 
 .form-2 .section-title {
 	margin-bottom: 0.5rem;
- }
+}
 
 .form-2 h2 {
 	margin-bottom: 1.375rem;
@@ -1471,13 +1377,13 @@ input[type='checkbox'] {
 	position: absolute;
 	width: 3.25rem;
 	height: 3.25rem;
-	background: url('../images/hexagono.png') center center no-repeat;
+	background: url("../images/hexagono.png") center center no-repeat;
 	background-size: 3.25rem 3.25rem;
 	transition: all 0.2s ease;
 }
 
 .form-2 .fa-stack:hover .hexagon {
-	background: url('../images/hexagon-white.svg') center center no-repeat;
+	background: url("../images/hexagon-white.svg") center center no-repeat;
 	background-size: 3.25rem 3.25rem;
 }
 
@@ -1491,7 +1397,6 @@ input[type='checkbox'] {
 .form-2 .fa-stack:hover .fa-stack-1x {
 	color: #212529;
 }
-
 
 /**********************/
 /*     17. Footer     */
@@ -1516,7 +1421,6 @@ input[type='checkbox'] {
 	line-height: 1.375rem;
 }
 
-
 /*************************/
 /*     18. Copyright     */
 /*************************/
@@ -1532,7 +1436,6 @@ input[type='checkbox'] {
 	color: #dfe5ec;
 	text-decoration: none;
 }
-
 
 /**********************************/
 /*     19. Back To Top Button     */
@@ -1552,9 +1455,8 @@ a.back-to-top {
 }
 
 a:hover.back-to-top {
-	background-color: #13aa87; 
+	background-color: #13aa87;
 }
-
 
 /***************************/
 /*     20. Extra Pages     */
@@ -1620,13 +1522,11 @@ a:hover.back-to-top {
 	margin-top: 1.75rem;
 }
 
-
 /*****************************/
 /*     21. Media Queries     */
-/*****************************/	
+/*****************************/
 /* Min-width width 768px */
 @media (min-width: 768px) {
-	
 	/* General Styles */
 	.p-heading {
 		width: 85%;
@@ -1635,14 +1535,13 @@ a:hover.back-to-top {
 	}
 	/* end of general styles */
 
-
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 1.5rem 2.125rem 2rem;
 		box-shadow: none;
-        background: transparent;
+		background: transparent;
 	}
-	
+
 	.navbar-custom .navbar-brand.logo-text {
 		color: #fff;
 	}
@@ -1655,14 +1554,14 @@ a:hover.back-to-top {
 	.navbar-custom .nav-item .nav-link {
 		padding: 0.25rem 0.75rem 0.25rem 0.75rem;
 	}
-	
+
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
 		color: #212529;
 	}
 
 	.navbar-custom.top-nav-collapse {
-        padding: 0.375rem 1.5rem 0.375rem 2rem;
+		padding: 0.375rem 1.5rem 0.375rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
 		background-color: #343a40;
 	}
@@ -1674,7 +1573,7 @@ a:hover.back-to-top {
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
 		color: #fff;
 	}
-	
+
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
 		color: #212529;
@@ -1687,7 +1586,7 @@ a:hover.back-to-top {
 		border-radius: 0.25rem;
 		box-shadow: 0 0.25rem 0.375rem 0 rgba(0, 0, 0, 0.03);
 	}
-	
+
 	.navbar-custom.top-nav-collapse .dropdown-menu {
 		border-top: 0.125rem solid rgba(0, 0, 0, 0);
 	}
@@ -1702,7 +1601,6 @@ a:hover.back-to-top {
 	}
 	/* end of navigation */
 
-
 	/* Header */
 	.header .header-content {
 		padding-top: 13rem;
@@ -1714,13 +1612,11 @@ a:hover.back-to-top {
 	}
 	/* end of header */
 
-
 	/* Details 1 */
 	.accordion .accordion-container {
 		max-width: 70%;
 	}
 	/* end of details 1 */
-
 
 	/* Details 2 */
 	.tabs .tabs-container {
@@ -1732,34 +1628,18 @@ a:hover.back-to-top {
 		width: 45%;
 		margin-top: 0;
 	}
-	
+
 	.tabs #tab-2 .list-unstyled.first {
 		margin-right: 2rem;
 	}
 	/* end of details 2 */
 
-
-	/* Testimonials */
-	.slider .swiper-button-prev {
-		left: 1rem;
-		width: 1.375rem;
-		background-size: 1.375rem 2.125rem;
-	}
-	
-	.slider .swiper-button-next {
-		right: 1rem;
-		width: 1.375rem;
-		background-size: 1.375rem 2.125rem;
-	}
-	/* end of testimonials */
-
-
 	/* Projects */
-	.filter .element-item { 
-		width: 25%; 
+	.filter .element-item {
+		width: 25%;
 	}
-	
-	.filter .element-item .element-item-overlay { 
+
+	.filter .element-item .element-item-overlay {
 		opacity: 0;
 		transition: opacity 0.3s ease;
 	}
@@ -1769,15 +1649,12 @@ a:hover.back-to-top {
 	}
 	/* end of projects */
 
-
 	/* About */
 	.counter #counter {
 		text-align: justify;
 	}
 
-	
 	/* end of about */
-
 
 	/* Contact */
 	.form-2 .list-unstyled li {
@@ -1789,7 +1666,6 @@ a:hover.back-to-top {
 		display: block;
 	}
 	/* end of contact */
-
 
 	/* Extra Pages */
 	.ex-header {
@@ -1804,16 +1680,13 @@ a:hover.back-to-top {
 }
 /* end of min-width width 768px */
 
-
 /* Min-width width 992px */
 @media (min-width: 992px) {
-	
 	/* General Styles */
 	.p-heading {
 		width: 65%;
 	}
 	/* end of general styles */
-
 
 	/* Navigation */
 	.navbar-custom .social-icons {
@@ -1830,16 +1703,16 @@ a:hover.back-to-top {
 		width: 1.625rem;
 		height: 1.625rem;
 		position: absolute;
-		background: url('../images/hexagono.png') center center no-repeat;
+		background: url("../images/hexagono.png") center center no-repeat;
 		background-size: 1.625rem 1.625rem;
 		transition: all 0.2s ease;
 	}
 
 	.navbar-custom .fa-stack:hover .hexagon {
-		background: url('../images/hexagon-white.svg') center center no-repeat;
+		background: url("../images/hexagon-white.svg") center center no-repeat;
 		background-size: 1.625rem 1.625rem;
 	}
-	
+
 	.navbar-custom .fa-stack-1x {
 		font-size: 0.6875rem;
 		line-height: 1.625rem;
@@ -1852,7 +1725,6 @@ a:hover.back-to-top {
 	}
 	/* end of navigation */
 
-
 	/* Header */
 	.header .header-content {
 		padding-top: 14rem;
@@ -1864,7 +1736,6 @@ a:hover.back-to-top {
 	}
 	/* end of header */
 
-
 	/* Intro */
 	.basic-1 {
 		padding-top: 6.875rem;
@@ -1875,7 +1746,6 @@ a:hover.back-to-top {
 	}
 	/* end of intro */
 
-
 	/* Description */
 	.cards-1 .card {
 		display: inline-block;
@@ -1883,13 +1753,12 @@ a:hover.back-to-top {
 		text-align: left;
 		vertical-align: top;
 	}
-	
-	.cards-1 div.card:nth-child(3n+2) {
+
+	.cards-1 div.card:nth-child(3n + 2) {
 		margin-right: 2.5rem;
 		margin-left: 2.5rem;
 	}
 	/* end of description */
-
 
 	/* Services */
 	.cards-2 .card {
@@ -1898,31 +1767,30 @@ a:hover.back-to-top {
 		vertical-align: top;
 	}
 
-	.cards-2 .col-lg-12 div.card:nth-child(3n+2) {
+	.cards-2 .col-lg-12 div.card:nth-child(3n + 2) {
 		margin-right: 1.25rem;
 		margin-left: 1.25rem;
 	}
 	/* end of services */
 
-
 	/* Details 1 */
 	.accordion {
 		height: 34.625rem;
 	}
-	
+
 	.accordion .area-1 {
 		width: 50%;
 		height: 100%;
 		display: inline-block;
 	}
-	
+
 	.accordion .area-2 {
 		width: 50%;
 		height: 100%;
 		display: inline-block;
 		vertical-align: top;
 	}
-	
+
 	.accordion .accordion-container {
 		max-width: 88%;
 		margin-left: 2rem;
@@ -1933,7 +1801,6 @@ a:hover.back-to-top {
 		width: 85%;
 	}
 	/* end of details 1 */
-
 
 	/* Details 2 */
 	.tabs {
@@ -1965,10 +1832,9 @@ a:hover.back-to-top {
 	}
 	/* end of details 2 */
 
-
 	/* Call Me */
 	.form-1 {
-		padding-top: 7rem;	
+		padding-top: 7rem;
 	}
 
 	.form-1 .text-container {
@@ -1976,12 +1842,11 @@ a:hover.back-to-top {
 	}
 	/* end of call me */
 
-
 	/* Project Lightboxes */
 	.lightbox-basic img {
 		margin-bottom: 0;
 	}
-	
+
 	.lightbox-basic h3 {
 		margin-top: 0.375rem;
 	}
@@ -1992,7 +1857,6 @@ a:hover.back-to-top {
 	}
 	/* end of project lightboxes */
 
-
 	/* Team */
 	.basic-2 .team-member {
 		width: 12.75rem;
@@ -2002,13 +1866,11 @@ a:hover.back-to-top {
 	}
 	/* end of team */
 
-
 	/* About */
 	.counter .image-container {
 		margin-bottom: 0;
 	}
 	/* end of about */
-
 
 	/* Contact */
 	.form-2 {
@@ -2019,7 +1881,6 @@ a:hover.back-to-top {
 		margin-bottom: 0;
 	}
 	/* end of contact */
-
 
 	/* Extra Pages */
 	.ex-header h1 {
@@ -2035,16 +1896,13 @@ a:hover.back-to-top {
 }
 /* end of min-width width 992px */
 
-
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
-	
 	/* General Styles */
 	.p-heading {
 		width: 55%;
 	}
 	/* end of general styles */
-
 
 	/* Navigation */
 	.navbar-custom {
@@ -2058,14 +1916,12 @@ a:hover.back-to-top {
 	}
 	/* end of navigation */
 
-	
 	/* Header */
 	.header .header-content {
 		padding-top: 14.75rem;
 		padding-bottom: 17.5rem;
 	}
 	/* end of header */
-
 
 	/* Intro */
 	.basic-1 .text-container {
@@ -2074,18 +1930,16 @@ a:hover.back-to-top {
 	}
 	/* end of intro */
 
-
 	/* Description */
 	.cards-1 .card {
 		max-width: 21rem;
 	}
 
-	.cards-1 div.card:nth-child(3n+2) {
+	.cards-1 div.card:nth-child(3n + 2) {
 		margin-right: 2.875rem;
 		margin-left: 2.875rem;
 	}
 	/* end of description */
-
 
 	/* Services */
 	.cards-2 .card {
@@ -2096,12 +1950,11 @@ a:hover.back-to-top {
 		padding: 2.25rem 2.5rem 2.125rem 2.5rem;
 	}
 
-	.cards-2 .col-lg-12 div.card:nth-child(3n+2) {
+	.cards-2 .col-lg-12 div.card:nth-child(3n + 2) {
 		margin-right: 3rem;
 		margin-left: 3rem;
 	}
 	/* end of services */
-
 
 	/* Details 1 */
 	.accordion .accordion-container {
@@ -2109,7 +1962,6 @@ a:hover.back-to-top {
 		margin-left: 5rem;
 	}
 	/* end of details 1 */
-
 
 	/* Details 2 */
 	.tabs .tabs-container {
@@ -2123,20 +1975,18 @@ a:hover.back-to-top {
 	}
 	/* end of details 2 */
 
-
 	/* Call Me */
 	.form-1 .text-container {
 		margin-top: 1.375rem;
 		margin-right: 1.75rem;
-		margin-left: 3rem
+		margin-left: 3rem;
 	}
 
 	.form-1 form {
 		margin-left: 1.75rem;
-		margin-right: 3rem
+		margin-right: 3rem;
 	}
 	/* end of call me */
-
 
 	/* Projects */
 	.filter .element-item {
@@ -2144,11 +1994,10 @@ a:hover.back-to-top {
 		height: 16.875rem;
 	}
 
-	.filter .element-item .element-item-overlay span { 
+	.filter .element-item .element-item-overlay span {
 		top: 45%;
 	}
 	/* end of projects */
-
 
 	/* Team */
 	.basic-2 .team-member {
@@ -2157,7 +2006,6 @@ a:hover.back-to-top {
 		margin-left: 1.375rem;
 	}
 	/* end of team */
-
 
 	/* About */
 	.counter {
@@ -2175,8 +2023,7 @@ a:hover.back-to-top {
 		text-align: justify;
 	}
 	/* end of about */
-	
-	
+
 	/* Contact */
 	.form-2 .text-container {
 		margin-top: 0.875rem;
@@ -2188,13 +2035,11 @@ a:hover.back-to-top {
 	}
 	/* end of contact */
 
-
 	/* Footer */
 	.footer .text-container.about {
 		margin-right: 5rem;
 	}
 	/* end of footer */
-
 
 	/* Extra Pages */
 	.ex-header h1 {
@@ -2210,10 +2055,8 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 
-
 /* Min-width width 1600px */
 @media (min-width: 1600px) {
-	
 	/* Navigation */
 	.navbar-custom {
 		padding-right: 12rem;
