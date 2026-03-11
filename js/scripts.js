@@ -1,4 +1,7 @@
+﻿
 
+var WHATSAPP_NUMBER = '5516991778100';
+var WHATSAPP_BASE_URL = 'https://wa.me/' + WHATSAPP_NUMBER;
 
 (function($) {
     "use strict"; 
@@ -30,8 +33,18 @@
 	$(function() {
 		$(document).on('click', 'a.page-scroll', function(event) {
 			var $anchor = $(this);
+            var targetHref = $anchor.attr('href');
+            if (!targetHref || targetHref.charAt(0) !== '#') {
+                return;
+            }
+
+            var $target = $(targetHref);
+            if ($target.length === 0) {
+                return;
+            }
+
 			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
+				scrollTop: $target.offset().top
 			}, 600, 'easeInOutExpo');
 			event.preventDefault();
 		});
@@ -56,33 +69,6 @@
 			// Called after the entrance animation is executed.
 		}
     });
-    
-
-    /* Card Slider - Swiper */
-	var cardSlider = new Swiper('.card-slider', {
-		autoplay: {
-            delay: 4000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		},
-		slidesPerView: 3,
-		spaceBetween: 20,
-        breakpoints: {
-            // when window is <= 992px
-            992: {
-                slidesPerView: 2
-            },
-            // when window is <= 768px
-            768: {
-                slidesPerView: 1
-            } 
-        }
-    });
-
     
     /* Lightbox - Magnific Popup */
 	$('.popup-with-move-anim').magnificPopup({
@@ -165,6 +151,24 @@
 		}
     });
 
+    /* Keep WhatsApp links consistent from a single source of truth */
+    function buildWhatsAppUrl(message) {
+        if (!message) {
+            return WHATSAPP_BASE_URL;
+        }
+        return WHATSAPP_BASE_URL + '?text=' + encodeURIComponent(message);
+    }
+
+    $('[data-wa-link]').each(function() {
+        var message = $(this).attr('data-wa-message') || '';
+        $(this).attr('href', buildWhatsAppUrl(message));
+    });
+
+    $('#callMeForm').on('submit', function(event) {
+        event.preventDefault();
+        Enviar();
+    });
+
 
     /* Back To Top Button */
     // create the back to top button
@@ -187,39 +191,20 @@
 })(jQuery);
 
 function Enviar(){
-    let nome = document.getElementById("nomeid");
-    let telefone = document.getElementById("telefoneid");
-    let mensagem = document.getElementById("mensagemid");
+    var nome = document.getElementById("nomeid").value.trim();
+    var telefone = document.getElementById("telefoneid").value.trim();
+    var mensagem = document.getElementById("mensagemid").value.trim();
+    var texto = '';
 
-    if(nome.value != "" & telefone.value != "" & mensagem.value != ""){
-		console.log('aqui01')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20${mensagem.value}`);
-    } else if (nome.value != "" & telefone.value != ""){
-		console.log('aqui02')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
-
-    }else if(nome.value != ""){
-		console.log('aqui03')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
+    if (nome !== "" && telefone !== "" && mensagem !== "") {
+        texto = "Ola, meu nome e " + nome + ", meu telefone para contato e " + telefone + " e desejo " + mensagem;
+    } else if (nome !== "" && telefone !== "") {
+        texto = "Ola, meu nome e " + nome + ", meu telefone para contato e " + telefone + " e desejo saber mais sobre a Lemes Informatica";
+    } else if (nome !== "") {
+        texto = "Ola, meu nome e " + nome + " e desejo saber mais sobre a Lemes Informatica";
+    } else {
+        return;
     }
-    
-}
 
-function Enviar2(){
-    let nome = document.getElementById("nomeid2");
-    let telefone = document.getElementById("telefoneid2");
-    let mensagem = document.getElementById("mensagemid2");
-
-    if(nome.value != "" & telefone.value != "" & mensagem.value != ""){
-		console.log('aqui01')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20${mensagem.value}`);
-    } else if (nome.value != "" & telefone.value != ""){
-		console.log('aqui02')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20meu%20telefone%20para%20contato%20%C3%A9%20${telefone.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
-
-    }else if(nome.value != ""){
-		console.log('aqui03')
-        window.open(`https://wa.me/+5516991778100?text=Olá%20meu%20nome%20%C3%A9%20${nome.value}%20e%20desejo%20saber%20mais%20sobre%20a%20LemesInformatica`);
-    }
-    
+    window.open(WHATSAPP_BASE_URL + "?text=" + encodeURIComponent(texto), "_blank", "noopener,noreferrer");
 }
